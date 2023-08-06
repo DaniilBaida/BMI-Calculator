@@ -123,6 +123,164 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --dark-gray: rgb(51, 51, 51);
+  --blue: rgb(0, 96, 192);
+  --gray: rgb(112, 112, 112);
+}
+
 body {
   font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  color: var(--dark-gray);
+}
+
+.main-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.app-logo {
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--dark-gray);
+  text-align: center;
+  padding: 30px 42px;
+}
+
+.landing-text-container {
+  text-align: center;
+  color: var(--gray);
+}
+
+.landing-text-container h1 {
+  font-weight: 700;
+  font-size: 42px;
+  color: var(--dark-gray);
+  margin-bottom: 30px;
+}
+
+.calculator-container {
+  margin-top: 42px;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+
+  padding: 20px;
+  margin-bottom: 42px;
+}
+
+.calculator-container h2 {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.radio-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Hide the default radio button */
+input[type="radio"] {
+  display: none;
+}
+
+.radio-container label {
+  position: relative;
+  padding: 8px 5px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.radio-container label::before {
+  content: "";
+  height: 24px;
+  width: 24px;
+  border: 1px solid rgba(87, 87, 87, 50%);
+  border-radius: 50%;
+  margin-right: 10px; /* Adjust spacing */
+}
+
+/* Add the checked state for the custom radio button */
+input[type="radio"]:checked + label::before {
+  background-color: rgba(0, 96, 192);
+  border: 1px solid rgba(0, 96, 192);
+  box-shadow: 0 0 10px 0px rgba(0, 96, 192, 0.7);
+}
+
+.measure-info-text {
+  margin-top: 24px;
+  color: var(--gray);
+}
+
+.measure-container {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(87, 87, 87, 50%);
+  padding: 16px 24px;
+  border-radius: 12px;
+}
+
+.measure-text {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--dark-gray);
+  width: 100%;
+}
+
+.measure-unit {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.measure-text:active,
+.measure-text:focus {
+  border: none;
+
+  outline: none;
+}
+
+.your-bmi-container {
+  margin-top: 24px;
+  background-color: var(--blue);
+  color: white;
+  padding: 32px 42px;
+  border-radius: 12px;
+}
+
+.your-bmi-is {
+  font-weight: 600;
+  font-size: 16px;
+}
+.your-bmi {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.your-bmi-suggestion {
+  margin-top: 36px;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 600;
 }

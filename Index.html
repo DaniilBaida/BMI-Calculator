@@ -2,12 +2,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ShapeScore</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="main-container">
       <div class="app-logo">
-        <img src="assets/app-logo" alt="App Logo" />
+        <p>SHAPESCORE</p>
       </div>
       <div class="landing-text-container">
         <h1>Body Mass Index Calculator</h1>
@@ -22,22 +30,23 @@
         <h2>Enter your details below</h2>
         <div class="radio-container">
           <div class="radio-box">
-            <input type="radio" name="Unit" id="Metric" /> <span>Metric</span>
+            <input type="radio" name="Unit" id="Metric" />
+            <label for="Metric">Metric</label>
           </div>
           <div class="radio-box">
             <input type="radio" name="Unit" id="Imperial" />
-            <span>Imperial</span>
+            <label for="Imperial">Imperial</label>
           </div>
-        </div>
-        <p class="measure-info-text">Weight</p>
-        <div class="measure-container">
-          <div class="measure-text">185</div>
-          <div class="measure unit">cm</div>
         </div>
         <p class="measure-info-text">Height</p>
         <div class="measure-container">
-          <div class="measure-text">80</div>
-          <div class="measure unit">kg</div>
+          <input type="text" name="" class="measure-text" placeholder="185" />
+          <div class="measure-unit">cm</div>
+        </div>
+        <p class="measure-info-text">Weight</p>
+        <div class="measure-container">
+          <input type="text" name="" class="measure-text" placeholder="80" />
+          <div class="measure-unit">kg</div>
         </div>
         <div class="your-bmi-container">
           <div class="your-bmi-is">Your BMI is...</div>
