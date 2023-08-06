@@ -4,5 +4,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <div class="app-logo">
+        <img src="assets/app-logo" alt="App Logo" />
+      </div>
+      <div class="landing-text-container">
+        <h1>Body Mass Index Calculator</h1>
+        <p>
+          Enhance your understanding of how your weight correlates with your
+          height using our Body Mass Index (BMI) Calculator. Although BMI alone
+          does not dictate a healthy weight, it provides a valuable starting
+          point to assess your general health and well-being.
+        </p>
+      </div>
+      <div class="calculator-container">
+        <h2>Enter your details below</h2>
+        <div class="radio-container">
+          <div class="radio-box">
+            <input type="radio" name="Unit" id="Metric" /> <span>Metric</span>
+          </div>
+          <div class="radio-box">
+            <input type="radio" name="Unit" id="Imperial" />
+            <span>Imperial</span>
+          </div>
+        </div>
+        <p class="measure-info-text">Weight</p>
+        <div class="measure-container">
+          <div class="measure-text">185</div>
+          <div class="measure unit">cm</div>
+        </div>
+        <p class="measure-info-text">Height</p>
+        <div class="measure-container">
+          <div class="measure-text">80</div>
+          <div class="measure unit">kg</div>
+        </div>
+        <div class="your-bmi-container">
+          <div class="your-bmi-is">Your BMI is...</div>
+          <div class="your-bmi">23.4</div>
+          <div class="your-bmi-suggestion">
+            Based on your BMI, it indicates that you are within a healthy weight
+            range. Your ideal weight should fall between
+            <strong>63.3 kgs and 85.2 kgs.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
