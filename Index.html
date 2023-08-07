@@ -28,6 +28,7 @@
       </div>
       <div class="calculator-container">
         <h2>Enter your details below</h2>
+
         <div class="radio-container">
           <div class="radio-box">
             <input type="radio" name="Unit" id="Metric" />
@@ -38,19 +39,38 @@
             <label for="Imperial">Imperial</label>
           </div>
         </div>
-        <p class="measure-info-text">Height</p>
-        <div class="measure-container">
-          <input type="text" name="" class="measure-text" placeholder="185" />
-          <div class="measure-unit">cm</div>
+        <div class="flex">
+          <div class="height-container">
+            <p class="measure-info-text">Height</p>
+            <div class="measure-container">
+              <input
+                type="text"
+                name=""
+                class="measure-text"
+                placeholder="185"
+              />
+              <div class="measure-unit">cm</div>
+            </div>
+          </div>
+          <div class="weight-container">
+            <p class="measure-info-text">Weight</p>
+            <div class="measure-container">
+              <input
+                type="text"
+                name=""
+                class="measure-text"
+                placeholder="80"
+              />
+              <div class="measure-unit">kg</div>
+            </div>
+          </div>
         </div>
-        <p class="measure-info-text">Weight</p>
-        <div class="measure-container">
-          <input type="text" name="" class="measure-text" placeholder="80" />
-          <div class="measure-unit">kg</div>
-        </div>
+
         <div class="your-bmi-container">
-          <div class="your-bmi-is">Your BMI is...</div>
-          <div class="your-bmi">23.4</div>
+          <div>
+            <div class="your-bmi-is">Your BMI is...</div>
+            <div class="your-bmi">23.4</div>
+          </div>
           <div class="your-bmi-suggestion">
             Based on your BMI, it indicates that you are within a healthy weight
             range. Your ideal weight should fall between

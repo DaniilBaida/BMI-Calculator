@@ -143,9 +143,11 @@ body {
   margin: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   min-height: 100vh;
   box-sizing: border-box;
+
+  justify-content: center;
 }
 
 .app-logo {
@@ -161,6 +163,10 @@ body {
   color: var(--gray);
 }
 
+.landing-text-container p {
+  line-height: 24px;
+}
+
 .landing-text-container h1 {
   font-weight: 700;
   font-size: 42px;
@@ -172,10 +178,11 @@ body {
   margin-top: 42px;
 
   border-radius: 20px;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   padding: 20px;
   margin-bottom: 42px;
+  min-width: 300px;
 }
 
 .calculator-container h2 {
@@ -187,7 +194,11 @@ body {
 .radio-container {
   margin-top: 24px;
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
+}
+
+.radio-box {
+  width: 100%;
 }
 
 /* Hide the default radio button */
@@ -279,8 +290,37 @@ input[type="radio"]:checked + label::before {
 .your-bmi-suggestion {
   margin-top: 36px;
   font-weight: 300;
+  line-height: 24px;
 }
 
 strong {
   font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+  }
+
+  .flex {
+    display: flex;
+    gap: 24px;
+  }
+  .your-bmi-container {
+    border-radius: 12px 120px 120px 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 150px;
+  }
+  .your-bmi-suggestion {
+    margin-top: 0;
+    width: 50%;
+  }
+  .your-bmi {
+    font-size: 60px;
+  }
+  .your-bmi-is {
+  }
 }
