@@ -13,10 +13,10 @@
     />
   </head>
   <body>
+    <div class="app-logo">
+      <p>SHAPESCORE</p>
+    </div>
     <div class="main-container">
-      <div class="app-logo">
-        <p>SHAPESCORE</p>
-      </div>
       <div class="landing-container">
         <div class="landing-text-container">
           <h1>Body Mass Index Calculator</h1>
@@ -32,7 +32,7 @@
 
           <div class="radio-container">
             <div class="radio-box">
-              <input type="radio" name="Unit" id="Metric" />
+              <input type="radio" name="Unit" id="Metric" checked />
               <label for="Metric">Metric</label>
             </div>
             <div class="radio-box">
@@ -49,8 +49,9 @@
                   name=""
                   class="measure-text"
                   placeholder="0"
+                  id="height-input"
                 />
-                <div class="measure-unit">cm</div>
+                <div class="measure-unit" id="height-unit">cm</div>
               </div>
             </div>
             <div class="weight-container">
@@ -61,8 +62,9 @@
                   name=""
                   class="measure-text"
                   placeholder="0"
+                  id="weight-input"
                 />
-                <div class="measure-unit">kg</div>
+                <div class="measure-unit" id="weight-unit">kg</div>
               </div>
             </div>
           </div>
@@ -79,5 +81,6 @@
         </div>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
