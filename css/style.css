@@ -148,6 +148,7 @@ body {
   box-sizing: border-box;
 
   justify-content: center;
+  min-width: 300px;
 }
 
 .app-logo {
@@ -183,6 +184,8 @@ body {
   padding: 20px;
   margin-bottom: 42px;
   min-width: 300px;
+
+  background-color: white;
 }
 
 .calculator-container h2 {
@@ -237,6 +240,12 @@ input[type="radio"]:checked + label::before {
   color: var(--gray);
 }
 
+.height-container {
+  width: 100%;
+}
+.weight-container {
+  width: 100%;
+}
 .measure-container {
   margin-top: 8px;
   display: flex;
@@ -298,9 +307,6 @@ strong {
 }
 
 @media screen and (min-width: 768px) {
-  .main-container {
-  }
-
   .flex {
     display: flex;
     gap: 24px;
@@ -322,5 +328,41 @@ strong {
     font-size: 60px;
   }
   .your-bmi-is {
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    display: block;
+  }
+
+  .calculator-container {
+    width: 100%;
+    min-width: 450px;
+    max-width: 650px;
+  }
+
+  .landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0 56px;
+    height: 80%;
+  }
+  .landing-text-container {
+    max-width: 650px;
+    text-align: left;
+  }
+
+  .your-bmi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .your-bmi-suggestion {
+    width: 100%;
   }
 }
