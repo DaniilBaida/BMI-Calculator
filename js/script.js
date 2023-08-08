@@ -57,7 +57,10 @@ const isHealthy = function (bmi) {
 
 const checkIdealWeight = function (height) {
   if (metricInput.checked) {
-    return 50 + 0.91 * height - 152.4;
+    let heightInMeters = height / 100;
+    const idealBMI = 22;
+    const idealWeight = idealBMI * (heightInMeters * heightInMeters);
+    return idealWeight;
   }
 };
 
@@ -68,7 +71,9 @@ const calcBmi = function (height, weight) {
       yourBmi.innerHTML = Metric.calcBmi(height, weight).toFixed(2);
       bmiSuggestion.innerHTML = `Your BMI Suggests you're at a ${isHealthy(
         bmi
-      )} weight. Your ideal weight is ${checkIdealWeight(height).toFixed(2)}kg`;
+      )} weight. <strong>Your ideal weight is ${checkIdealWeight(
+        height
+      ).toFixed(2)}kg</strong>`;
 
       yourBmiIs.innerHTML = "Your BMI is...";
     } else {
@@ -77,6 +82,21 @@ const calcBmi = function (height, weight) {
       bmiSuggestion.innerHTML = "Enter your height and weight to see your BMI!";
     }
   } else if (imperialInput.checked) {
+    let bmi = Imperial.calcBmi(height, weight);
+    if (bmi > 10 && bmi < 60) {
+      yourBmi.innerHTML = Imperial.calcBmi(height, weight).toFixed(2);
+      bmiSuggestion.innerHTML = `Your BMI Suggests you're at a ${isHealthy(
+        bmi
+      )} weight. <strong>Your ideal weight is ${checkIdealWeight(
+        height
+      ).toFixed(2)}kg</strong>`;
+
+      yourBmiIs.innerHTML = "Your BMI is...";
+    } else {
+      yourBmiIs.innerHTML = "Welcome!";
+      yourBmi.innerHTML = "";
+      bmiSuggestion.innerHTML = "Enter your height and weight to see your BMI!";
+    }
   }
 };
 
